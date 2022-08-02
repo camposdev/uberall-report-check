@@ -1,9 +1,10 @@
 import axios from 'axios'
 import countries from './country_names.json'
 
-const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY
+const BASE_URL = 'https://sandbox.uberall.com/api/'
+const PUBLIC_KEY = 'GNpPyrkYiTS5BV4F8XckW3kYurprwSk7cRG3Z4jOtrTTBceyfPveAOvDFk3mYY0ofundf'
 
-axios.defaults.baseURL = process.env.REACT_APP_BASE_URL
+axios.defaults.baseURL = BASE_URL
 
 export type SearchParams = {
   name: string
@@ -27,7 +28,7 @@ const search = async (params: SearchParams) => {
   }
 }
 
-const searchDirectory = async (id: number, token: string, directory: string = '') => {
+const searchDirectory = async (id: number, token: string, directory: string) => {
   try {
     const { data } = await axios.get(
       `search/${id}`, {

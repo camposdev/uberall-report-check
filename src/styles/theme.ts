@@ -4,7 +4,10 @@ const theme = {
     accent: '#239fe6',
     light: '#f6f9fc',
     dark: '#0b1924',
-    white: '#ffffff'
+    white: '#ffffff',
+    grey: '#586067',
+    success: '#13dd78',
+    error: '#dd135b'
   },
   breakpoints: {
     sm: '576px',

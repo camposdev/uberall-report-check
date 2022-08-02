@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
+  a {
+    color: ${palette('accent')};
+  }
+
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
